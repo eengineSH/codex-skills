@@ -1,6 +1,6 @@
 ---
 name: burza-mozgow
-description: "Używaj, gdy człowiek chce rozkminić pomysł, zrobić burzę mózgów, zaplanować funkcjonalność, omówić warianty architektury albo dopracować wymagania przed kodowaniem. Skill prowadzi rozmowę po polsku: najpierw kontekst i pytania, potem warianty, rekomendacja i projekt/specyfikacja, bez przechodzenia do implementacji bez osobnej zgody."
+description: "Używaj, gdy człowiek chce rozkminić pomysł, zrobić burzę mózgów, burzę mozgow, burzę burków, brainstorm, zaplanować funkcjonalność, omówić warianty architektury albo dopracować wymagania przed kodowaniem. Skill prowadzi rozmowę po polsku: najpierw kontekst i pytania, potem warianty, rekomendacja i projekt/specyfikacja, bez przechodzenia do implementacji bez osobnej zgody."
 ---
 
 # Burza Mózgów
@@ -45,7 +45,10 @@ Jeśli człowiek wyraźnie prosi o kodowanie zaakceptowanego zadania, nie zatrzy
 3. Zadawaj pytania pojedynczo.
    - Nie zalewaj człowieka listą naraz.
    - Jeśli odpowiedź na jedno pytanie zmienia następne pytania, poczekaj.
-   - Gdy możesz, podaj 2-3 konkretne warianty odpowiedzi i krótkie konsekwencje.
+   - Każde pytanie musi być opatrzone minimum 2 i maksimum 3 konkretnymi propozycjami odpowiedzi.
+   - Przy propozycjach wskaż jedną rekomendowaną opcję i krótko wyjaśnij, dlaczego ją sugerujesz.
+   - Jeśli nie ma realnych alternatyw i pytanie byłoby sztuczne, nie pytaj; wypisz założenia, które przyjmujesz do potwierdzenia.
+   - Każde założenie do potwierdzenia opisz w 2-3 zdaniach, tak aby człowiek mógł szybko zrozumieć sens, konsekwencję i powód przyjęcia tego założenia.
 
 4. Zaproponuj 2-3 podejścia.
    - Zacznij od rekomendowanego wariantu.
@@ -126,6 +129,8 @@ W czasie burzy mózgów pisz naturalnie, ale trzymaj strukturę tam, gdzie pomag
 1. Krótko podsumuj, co już wiemy.
 2. Nazwij decyzję, którą teraz trzeba podjąć.
 3. Zadaj jedno pytanie albo pokaż 2-3 warianty.
-4. Po zebraniu odpowiedzi przedstaw rekomendowany kierunek i uzasadnienie.
+4. Każdy wariant pytania oznacz rekomendacją albo wyjaśnij, dlaczego wariant nie jest rekomendowany.
+5. Jeśli nie zadajesz pytania, pokaż listę przyjętych założeń do potwierdzenia; każde założenie opisz w 2-3 zdaniach.
+6. Po zebraniu odpowiedzi przedstaw rekomendowany kierunek i uzasadnienie.
 
 Nie kończ brainstormingu "gotowym planem implementacji", jeśli człowiek nadal eksploruje temat. Plan implementacji to osobny etap po akceptacji kierunku.
