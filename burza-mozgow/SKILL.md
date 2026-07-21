@@ -28,6 +28,21 @@ Jeśli człowiek wyraźnie prosi o kodowanie zaakceptowanego zadania, nie zatrzy
 6. Preferuj konkretne propozycje wyboru, ale nie wciskaj sztucznego multiple choice tam, gdzie lepsza jest odpowiedź opisowa.
 7. Nie dodawaj niepotrzebnych funkcji. Pilnuj YAGNI.
 8. Nie proponuj pobocznych refaktorów, jeśli nie służą bezpośrednio omawianemu celowi.
+9. Każdy projekt nowej aplikacji, funkcjonalności albo zmiany w istniejącej funkcjonalności musi mieć osobną sekcję "Model danych". Bez domkniętego modelu danych koncepcja nie jest opracowana.
+10. Na poziomie burzy mózgów model danych ma być modelem logicznym, bez wymagania typów SQL. Jeśli rozwiązanie nie wymaga tabel ani zmian w danych trwałych, sekcja "Model danych" nadal jest obowiązkowa i musi jawnie uzasadnić brak zmian.
+
+## Model Danych
+
+Sekcja "Model danych" jest obowiązkowa w każdym projekcie rozwiązania, również przy małych zmianach. Jej szczegółowość dopasuj do skali tematu, ale nie pomijaj jej nigdy.
+
+1. Wskaż nowe tabele, które rozwiązanie będzie wykorzystywać.
+2. Wskaż istniejące tabele, które trzeba zmienić albo z których rozwiązanie będzie korzystać.
+3. Opisz logiczne pola bez konieczności podawania typów SQL.
+4. Opisz relacje między tabelami i źródło prawdy dla kluczowych danych.
+5. Rozróżnij dane wymagane, opcjonalne, wyliczane i historyczne.
+6. Opisz migrację, zachowanie albo brak zmian w istniejących danych, jeśli dotyczy.
+7. Uwzględnij wpływ na cache, indeksy wyszukiwania, kolejki, raporty i integracje.
+8. Jeśli funkcjonalność nie wymaga tabel ani zmian w danych trwałych, napisz to wprost i krótko uzasadnij.
 
 ## Przebieg
 
@@ -67,6 +82,7 @@ Jeśli człowiek wyraźnie prosi o kodowanie zaakceptowanego zadania, nie zatrzy
      - poza zakresem
      - architektura
      - przepływ danych
+     - model danych
      - przypadki użycia
      - błędy i edge case'y
      - migracja danych lub rollout
@@ -79,6 +95,11 @@ Jeśli człowiek wyraźnie prosi o kodowanie zaakceptowanego zadania, nie zatrzy
 
 7. Dopiero po akceptacji zdecyduj, czy potrzebna jest specyfikacja.
    - Jeśli lokalne instrukcje wymagają specyfikacji, zaproponuj jej przygotowanie albo przygotuj ją zgodnie z tymi instrukcjami.
+   - Jeśli specyfikacja trafia do issue albo komentarza w issue, rozbij ją na maksymalnie atomowe checkboxy Markdown.
+   - Każda decyzja, wymaganie, edge case, test, migracja, kryterium akceptacji i konsekwencja biznesowa mają mieć osobny checkbox, jeśli mogą wpływać na implementację albo weryfikację.
+   - Gdy później kodujesz na podstawie takiej checklisty, odhaczaj każdy checkbox natychmiast po faktycznym zakodowaniu i zweryfikowaniu danego punktu.
+   - Odhaczanie checkboxów jest bezwzględną częścią kodowania: nie odkładaj go na koniec implementacji, etap commita, etap PR ani raport końcowy, bo checklista ma na bieżąco pokazywać, czy cały zakres specyfikacji został rzeczywiście zrealizowany.
+   - Checkbox `- [x]` oznacza, że punkt jest zrobiony i zweryfikowany w uzgodnionym zakresie; samo rozpoczęcie pracy, samo dopisanie kodu albo zamiar późniejszej weryfikacji nie wystarcza.
    - Nie commituj specyfikacji automatycznie.
    - Nie przechodź do kodowania tylko dlatego, że specyfikacja powstała.
 
@@ -86,6 +107,8 @@ Jeśli człowiek wyraźnie prosi o kodowanie zaakceptowanego zadania, nie zatrzy
    - Placeholdery: usuń `TODO`, `TBD`, puste sekcje i decyzje odłożone "na później".
    - Spójność: sprawdź, czy wymagania, architektura, przypadki użycia i testy nie przeczą sobie nawzajem.
    - Jednoznaczność: popraw wymagania, które można sensownie zinterpretować na dwa różne sposoby.
+   - Checklista: sprawdź, czy checkboxy są atomowe i możliwe do jednoznacznego odhaczenia po implementacji oraz weryfikacji.
+   - Model danych: sprawdź, czy projekt ma osobną sekcję "Model danych" i czy bez niej nie uznajesz koncepcji za domkniętą.
    - Scope: sprawdź, czy dokument opisuje jeden spójny etap, a nie kilka niezależnych projektów sklejonych razem.
    - YAGNI: usuń elementy, które nie wynikają z celu, decyzji człowieka ani realnego ryzyka implementacyjnego.
    - Kalibracja: flaguj i poprawiaj tylko rzeczy, które mogłyby realnie zepsuć planowanie albo implementację; nie rozdmuchuj stylistycznych drobiazgów.
@@ -98,11 +121,12 @@ Dobre zakończenie brainstormingu powinno dać odpowiedzi na pytania:
 2. Czego świadomie nie robimy?
 3. Jakie dane są potrzebne?
 4. Gdzie jest źródło prawdy?
-5. Jakie moduły lub komponenty biorą udział?
-6. Jak mierzymy sukces?
-7. Jakie są najważniejsze ryzyka?
-8. Jak bezpiecznie wdrożyć i wycofać zmianę?
-9. Jak to przetestować?
+5. Jakie tabele, pola logiczne i relacje są potrzebne albo dlaczego nie są potrzebne?
+6. Jakie moduły lub komponenty biorą udział?
+7. Jak mierzymy sukces?
+8. Jakie są najważniejsze ryzyka?
+9. Jak bezpiecznie wdrożyć i wycofać zmianę?
+10. Jak to przetestować?
 
 ## Praca W Istniejącym Kodzie
 
