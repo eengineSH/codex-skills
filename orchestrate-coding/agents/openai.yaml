@@ -1,0 +1,6 @@
+interface:
+  display_name: "Orchestrate Coding"
+  short_description: "Run a reviewed coding workflow"
+  default_prompt: "Use $orchestrate-coding to implement this change with challenge and review."
+policy:
+  allow_implicit_invocation: true
