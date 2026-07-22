@@ -1,0 +1,4 @@
+interface:
+  display_name: "Grillowanie pomysłów"
+  short_description: "Dopracuj pomysł do kompletnej specyfikacji"
+  default_prompt: "Użyj $grillowanie-pomyslow, aby zgrillować mój pomysł i przygotować kompletną specyfikację."

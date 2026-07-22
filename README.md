@@ -12,7 +12,7 @@ git clone git@github.com:eengineSH/codex-skills.git
 
 mkdir -p ~/.codex/skills
 cd ~/.codex/skills
-ln -s ~/playground/codex-skills/burza-mozgow
+ln -s ~/playground/codex-skills/grillowanie-pomyslow
 ```
 
 Dzięki temu konfiguracja Codexa zawiera tylko wybrane skille, zamiast wszystkich elementów dostępnych w repozytorium.
