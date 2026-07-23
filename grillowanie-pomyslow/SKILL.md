@@ -13,8 +13,9 @@ Zamień pomysł w jednoznaczną specyfikację. Przeanalizuj wszystkie istotne ga
 2. Nie implementuj, nie generuj szkieletu i nie zmieniaj kodu podczas grillowania.
 3. Do implementacji przejdź dopiero po późniejszym, jednoznacznym poleceniu człowieka.
 4. Pilnuj YAGNI. Nie dodawaj pobocznych funkcji ani refaktorów.
-5. Pytaj człowieka wyłącznie o decyzje wpływające na zakres, zachowanie, koszt albo ryzyko.
-6. Fakty, oczywiste szczegóły i drobne założenia ustalaj samodzielnie, a następnie zapisz je w specyfikacji.
+5. Przed każdym pytaniem wykonaj test konieczności: jeśli odpowiedź jednoznacznie wynika z wcześniejszych decyzji, celu, kodu, danych albo istniejącego zachowania, nie pytaj — ustal ją samodzielnie i zapisz w specyfikacji.
+6. Pytaj człowieka wyłącznie wtedy, gdy pozostają co najmniej dwa sensowne rozstrzygnięcia wpływające na zakres, zachowanie, koszt albo ryzyko.
+7. Fakty, oczywiste szczegóły, naturalne konsekwencje ustaleń i drobne założenia ustalaj samodzielnie, a następnie zapisz je w specyfikacji.
 
 ## Przebieg
 
@@ -29,7 +30,7 @@ Zamień pomysł w jednoznaczną specyfikację. Przeanalizuj wszystkie istotne ga
 ### 2. Grilluj decyzje
 
 1. Zadawaj dokładnie jedno główne pytanie naraz.
-2. Domyślnie przedstaw jedną konkretną rekomendację z krótkim uzasadnieniem i zakończ pytaniem `Zgoda? (tak/nie)`.
+2. Gdy istnieje realny wybór, przedstaw jedną konkretną rekomendację z krótkim uzasadnieniem i zakończ pytaniem `Zgoda? (tak/nie)`. Gdy rekomendacja jest już jedyną sensowną odpowiedzią albo wynika z wcześniejszych ustaleń, przyjmij ją bez pytania.
 3. Po odpowiedzi `nie` dopiero w następnym pytaniu ustal alternatywę.
 4. Gdy istnieje rzeczywisty wybór, pozwól odpowiedzieć numerem albo pojedynczym słowem.
 5. Przy realnych wariantach krótko opisz dla każdego: co robimy, zysk, koszt albo ryzyko oraz kiedy warto go wybrać.
